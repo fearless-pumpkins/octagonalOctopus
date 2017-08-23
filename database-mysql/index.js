@@ -9,8 +9,8 @@ const numPeopleOnMission = {
   10: [3,4,4,5,5]
 }
 
-const sequelize = new Sequelize('Avalon', 'root', '', {
-  host: 'localhost',
+const sequelize = new Sequelize('Avalon', (DB_USERNAME || 'root'), (DB_PASSWORD || ''), {
+  host: 'localhost' || 'us-cdbr-iron-east-05.cleardb.net',
   dialect: 'mysql',
 });
 
@@ -116,7 +116,7 @@ module.exports.nextMission = function(gameToken, callback) {
 
 module.exports.addPlayer = function(token, host, name, socketid, callback) {
   User.create({
-    username: name, 
+    username: name,
     socketid: socketid,
     host: host,
     gameKey: token,
@@ -249,4 +249,3 @@ module.exports.clearGame = function(gameToken, callback) {
   })
   .then(callback);
 };
-
