@@ -33,7 +33,7 @@ you will know how to play the game Avalon.)
 ## Requirements
 
 As a user, any tolerably modern web browser will suffice. There are no
-installation requirements.
+installation requirements. :)
 
 ## Development
 
