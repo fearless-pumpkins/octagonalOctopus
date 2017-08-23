@@ -9,7 +9,7 @@ const numPeopleOnMission = {
   10: [3,4,4,5,5]
 }
 
-const db = process.env.CLEARDB_DATABASE_URL ? new Sequelize('avalon', 'b5743b78cffe8b', 'ddbdcc9b', {dialect: "mysql", host: 'us-cdbr-iron-east-05.cleardb.net'}) : new Sequelize(process.env.CLEARDB_DATABASE_URL);
+const sequelize = process.env.CLEARDB_DATABASE_URL ? new Sequelize('avalon', 'b5743b78cffe8b', 'ddbdcc9b', {dialect: "mysql", host: 'us-cdbr-iron-east-05.cleardb.net'}) : new Sequelize(process.env.CLEARDB_DATABASE_URL);
 
 const User = sequelize.define('user', {
   username: {
