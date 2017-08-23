@@ -9,10 +9,7 @@ const numPeopleOnMission = {
   10: [3,4,4,5,5]
 }
 
-const sequelize = new Sequelize('Avalon', (DB_USERNAME || 'root'), (DB_PASSWORD || ''), {
-  host: 'localhost' || 'us-cdbr-iron-east-05.cleardb.net',
-  dialect: 'mysql',
-});
+const db = process.env.CLEARDB_DATABASE_URL ? new Sequelize('avalon', 'b5743b78cffe8b', 'ddbdcc9b') : new Sequelize(process.env.CLEARDB_DATABASE_URL);
 
 const User = sequelize.define('user', {
   username: {
