@@ -6,7 +6,16 @@ class InfoPanel extends React.Component {
     super(props);
   }
 
+
+
   render() {
+
+    var role = this.props.role.split(' ').join('');
+    console.log(role);
+    var styles = {
+      content: `url(/styles/Resources/${role}.png)`
+    }
+    console.log(styles);
     if (!this.props.extraInfo) {
         var extraInfo = ''
       } else {
@@ -15,8 +24,13 @@ class InfoPanel extends React.Component {
       }
       return (
       <div id="infoPanel">
+<<<<<<< HEAD
 
         <p> Your role: {this.props.role} </p>
+=======
+        <h5> Info Panel </h5>
+        <div style={styles}></div>
+>>>>>>> added dynamic render of character cards
         <p> {extraInfo} </p>
 
       </div>
