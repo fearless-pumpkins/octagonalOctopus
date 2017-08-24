@@ -10,10 +10,12 @@ class InfoPanel extends React.Component {
 
 
   render() {
+
     var split = this.props.role.split('_');
     var name = split[0];
     var role = split[0].split(' ').join('').toLowerCase();
     var extraInfo;
+
 
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
