@@ -365,6 +365,13 @@ class App extends React.Component {
         />
       )},
 
+    // renderPhoto: () => {
+
+    //   return (
+    //     <RenderPhotos
+    //     role={this.state.role}
+    //     />
+    // )},
 
     WelcomeScreen: ()=> {
 
