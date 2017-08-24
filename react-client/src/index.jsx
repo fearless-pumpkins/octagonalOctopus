@@ -388,7 +388,6 @@ class App extends React.Component {
   render () {
     return (
         <div>
-        <GameBoard />
         {this.screenDispatch[this.state.pageID]()}
       </div>)
   }
