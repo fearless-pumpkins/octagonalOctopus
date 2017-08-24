@@ -11,11 +11,9 @@ class InfoPanel extends React.Component {
   render() {
 
     var role = this.props.role.split(' ').join('');
-    console.log(role);
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
-    console.log(styles);
     if (!this.props.extraInfo) {
         var extraInfo = ''
       } else {
