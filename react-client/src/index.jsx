@@ -17,12 +17,12 @@ import MerlinChoiceScreen from './components/MerlinChoiceScreen.jsx';
 import GameOutcomeScreen from './components/GameOutcomeScreen.jsx';
 import InfoPanel from './components/InfoPanel.jsx';
 import openSocket from 'socket.io-client';
-
+import GameBoard from './components/GameBoard/GameBoard.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.nextPage = this.nextPage.bind(this);
     this.waitingPage = this.waitingPage.bind(this);
 
@@ -74,7 +74,7 @@ class App extends React.Component {
                     missionOutcome: [],
                     gameOutcome: ''
                   });
-    }); 
+    });
 
     //players should be moved to the next page after host starts
     this.socket.on('playerstart', (data)=>{
@@ -171,6 +171,7 @@ class App extends React.Component {
       }
     });
 
+<<<<<<< HEAD
     
     /*
     PlayerEnterNameScreen    
@@ -188,6 +189,8 @@ class App extends React.Component {
     WelcomeScreen
     */
 
+=======
+>>>>>>> missions
 
     this.state = {
 
@@ -201,7 +204,11 @@ class App extends React.Component {
 
       accessCode: 'z3uewg',
 
+<<<<<<< HEAD
       missionPlayers: ['abhi', 'yang', 'rutherford'],  
+=======
+      missionPlayers: [],
+>>>>>>> missions
 
       missionSize: 3,
 
@@ -215,16 +222,16 @@ class App extends React.Component {
 
       missionOutcome: ['DZfrdgth','frsgdhj'],
 
-      gameOutcome: '', 
+      gameOutcome: '',
 
       playerRoleMapping: '',
 
       merlinChoice: null,
 
       extraInfo: null
-            
+
     };
-   
+
   this.screenDispatch = {
 
     PlayerEnterNameScreen: ()=> {
@@ -393,7 +400,7 @@ class App extends React.Component {
         />
       )}
     }
-  }  
+  }
 
   nextPage(pageID) {
     this.setState({pageID})
@@ -406,6 +413,7 @@ class App extends React.Component {
   render () {
     return (
         <div>
+        <GameBoard />
         {this.screenDispatch[this.state.pageID]()}
       </div>)
   }
