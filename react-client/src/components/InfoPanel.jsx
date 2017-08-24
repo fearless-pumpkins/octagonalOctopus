@@ -11,6 +11,7 @@ class InfoPanel extends React.Component {
   render() {
 
     var role = this.props.role.split(' ').join('').toLowerCase();
+
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
@@ -20,7 +21,7 @@ class InfoPanel extends React.Component {
       } else {
         console.log('extra Info: ', this.props.extraInfo);
         var usernames = this.props.extraInfo.slice(1, this.props.extraInfo.length);
-        
+
         var extraInfo = this.props.extraInfo[0] + usernames.join(', ');
         //console.log('usernames: ', usernames);
       }
