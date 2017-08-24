@@ -171,27 +171,6 @@ class App extends React.Component {
       }
     });
 
-<<<<<<< HEAD
-    
-    /*
-    PlayerEnterNameScreen    
-    GameOwnerEnterNameScreen
-      AwaitAssassinScreen -> doesn't show
-    AwaitMissionOutcomeScreen
-    DiscussMissionPlayersScreen
-    EnterMissionPlayersScreen
-      GameOutcomeScreen -> doesn't show after 3 failed or 3 passed
-    GameOwnerWaitingForPlayersScreen
-      MerlinChoiceScreen -> doesn't show
-    MissionOutcomeScreen
-    MissionVoteScreen
-    PlayerWaitingForPlayersScreen
-    WelcomeScreen
-    */
-
-=======
->>>>>>> missions
-
     this.state = {
 
       pageID: 'WelcomeScreen',
@@ -204,11 +183,7 @@ class App extends React.Component {
 
       accessCode: 'z3uewg',
 
-<<<<<<< HEAD
-      missionPlayers: ['abhi', 'yang', 'rutherford'],  
-=======
       missionPlayers: [],
->>>>>>> missions
 
       missionSize: 3,
 
