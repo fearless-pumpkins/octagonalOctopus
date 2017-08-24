@@ -24,6 +24,8 @@ class InfoPanel extends React.Component {
       <div id="infoPanel">
         <h5> Info Panel </h5>
         <div className="photos" style={styles}></div>
+        <div style={styles}></div>
+        <p> Your role: {this.props.role} </p>
         <p> {extraInfo} </p>
       </div>
       )}
