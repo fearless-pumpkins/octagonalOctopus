@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-
 import WelcomeScreen from './components/WelcomeScreen.jsx';
 import GameOwnerEnterNameScreen from './components/GameOwnerEnterNameScreen.jsx';
 import PlayerEnterNameScreen from './components/PlayerEnterNameScreen.jsx';
@@ -17,7 +16,7 @@ import MerlinChoiceScreen from './components/MerlinChoiceScreen.jsx';
 import GameOutcomeScreen from './components/GameOutcomeScreen.jsx';
 import InfoPanel from './components/InfoPanel.jsx';
 import openSocket from 'socket.io-client';
-
+import GameBoard from './components/GameBoard/GameBoard.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -171,14 +170,13 @@ class App extends React.Component {
       }
     });
 
-
     this.state = {
 
       pageID: 'WelcomeScreen',
 
-      players: ['abhi', 'yang', 'rutherford', 'patricks bf', 'host'],
+      players: ['abhi', 'yang', 'rutherford', 'patricksbf', 'host'],
 
-      role: '',
+      role: 'abscd',
 
       spyCount: 3,
 
@@ -194,9 +192,9 @@ class App extends React.Component {
 
       host: false,
 
-      username: '',
+      username: 'Guillaume',
 
-      missionOutcome: [],
+      missionOutcome: ['DZfrdgth','frsgdhj'],
 
       gameOutcome: '',
 
@@ -204,7 +202,7 @@ class App extends React.Component {
 
       merlinChoice: null,
 
-      extraInfo: null
+      extraInfo: null,
 
     };
 
