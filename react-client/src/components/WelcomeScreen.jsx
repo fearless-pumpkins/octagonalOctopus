@@ -30,9 +30,6 @@ class WelcomeScreen extends React.Component {
       var pages = {welcome: (<div id='welcomeScreen'>
      <h2> Welcome to Definitely Not Avalon </h2>
 
-
-
-
         <div className="welcomeScreenInput">
           <button onClick={this.host} >
             New Game
@@ -90,11 +87,6 @@ class WelcomeScreen extends React.Component {
 
 
         </div>
-
-
-
-
-
       </div>
     ),
     newgame: (<GameOwnerEnterNameScreen
