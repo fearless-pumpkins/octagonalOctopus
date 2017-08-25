@@ -11,7 +11,6 @@ class InfoPanel extends React.Component {
   render() {
 
     var role = this.props.role.replace(' ', '').toLowerCase();
-
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
@@ -25,7 +24,6 @@ class InfoPanel extends React.Component {
       <div id="infoPanel">
         <h5> Info Panel </h5>
         <div className="photos" style={styles}></div>
-        <p> Your role: {this.props.role} </p>
         <p> {extraInfo} </p>
       </div>
       )}
