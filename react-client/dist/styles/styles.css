@@ -164,14 +164,8 @@ ol, table {
   font-size: 50px;
 }
 
-<<<<<<< HEAD
 .tableRules{
   text-align: center;
-=======
-#tableRules{
-    table-layout: fixed;
-    width: 730px;
->>>>>>> resolve merge conflicts
 }
 
 input {
@@ -262,3 +256,6 @@ div.bottom {
 .row-fluid {
   text-align: center;
 }
+
+
+

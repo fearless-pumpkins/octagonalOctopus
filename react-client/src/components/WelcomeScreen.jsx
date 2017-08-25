@@ -30,12 +30,16 @@ class WelcomeScreen extends React.Component {
         <div id='welcomeScreen'>
      <h2> Welcome to Definitely Not Avalon </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> changed case
 >>>>>>> changed case
+=======
+
+>>>>>>> added multiple loyal servants functionality
         <div className="welcomeScreenInput">
           <button onClick={this.host} >
             New Game
