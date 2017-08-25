@@ -167,13 +167,12 @@ ol, table {
 
 .tableRules{
   text-align: center;
-
 }
 
 #tableRules{
     table-layout: fixed;
     width: 730px;
-}
+
 
 .photos {
   width: 40%;
@@ -274,3 +273,8 @@ div.bottom {
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> added multiple loyal servants functionality
