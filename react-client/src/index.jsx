@@ -174,13 +174,13 @@ class App extends React.Component {
 
       pageID: 'WelcomeScreen',
 
-      players: ['abhi', 'yang', 'rutherford', 'patricksbf', 'host'],
+      players: [],
 
-      role: 'abscd',
+      role: '',
 
       spyCount: 3,
 
-      accessCode: 'z3uewg',
+      accessCode: '',
 
       missionPlayers: [],
 
@@ -192,9 +192,9 @@ class App extends React.Component {
 
       host: false,
 
-      username: 'Guillaume',
+      username: '',
 
-      missionOutcome: ['DZfrdgth','frsgdhj'],
+      missionOutcome: [],
 
       gameOutcome: '',
 
