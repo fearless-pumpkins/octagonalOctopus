@@ -29,10 +29,7 @@ class WelcomeScreen extends React.Component {
     pageSelector(key) {
       var pages = {welcome: (<div id='welcomeScreen'>
      <h2> Welcome to Definitely Not Avalon </h2>
-<<<<<<< HEAD
 
-=======
->>>>>>> changed case
         <div className="welcomeScreenInput">
           <button onClick={this.host} >
             New Game

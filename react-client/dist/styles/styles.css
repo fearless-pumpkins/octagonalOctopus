@@ -201,6 +201,7 @@ button {
   background-color: lightgrey;
   font-size: 3.5vw;
   font-family: 'Eagle Lake', cursive;
+
 }
 
 /****Hover on buttons turns text red****/
@@ -252,6 +253,7 @@ button:hover, .submit:hover {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
 
 /*.infoPanelParent {
   display: flex;
