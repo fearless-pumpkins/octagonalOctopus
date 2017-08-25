@@ -61,19 +61,19 @@ class WelcomeScreen extends React.Component {
             </tr>
             <tr>
               <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`}} ></div></td>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/LoyalServant.png)`}} ></div></td>
-            </tr>
-            <tr>
-              <td style={{fontSize:'35px'}}>Minion of Mordred</td>
-              <td style={{fontSize:'35px'}}>Loyal Servant</td>
-            </tr>
-            <tr>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/morgana.png)`}} ></div></td>
               <td><div className="photosRules" style={{content: `url(/styles/Resources/percival.png)`}} ></div></td>
             </tr>
             <tr>
-              <td style={{fontSize:'35px'}}>Morgana</td>
+              <td style={{fontSize:'35px'}}>Minion of Mordred</td>
               <td style={{fontSize:'35px'}}>Percival</td>
+            </tr>
+            <tr>
+              <td><div className="photosRules" style={{content: `url(/styles/Resources/morgana.png)`}} ></div></td>
+              <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
+            </tr>
+            <tr>
+              <td style={{fontSize:'35px'}}>Morgana</td>
+              <td style={{fontSize:'35px'}}>Loyal Servant</td>
             </tr>
              <tr>
               <td><div className="photosRules" style={{content: `url(/styles/Resources/oberon.png)`}} ></div></td>
