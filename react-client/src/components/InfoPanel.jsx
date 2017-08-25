@@ -9,29 +9,29 @@ class InfoPanel extends React.Component {
 
 
   render() {
-    var split = this.props.role.split('_')
-    var name = split[0];
-    var role = split[0].split(' ').join('').toLowerCase();
+
+    var role = this.props.role.split(' ').join('').toLowerCase();
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
 
-    if (!this.props.extraInfo) {
-        var extraInfo = ''
-      } else {
-        console.log('extra Info: ', this.props.extraInfo);
-        var usernames = this.props.extraInfo.slice(1, this.props.extraInfo.length);
+    // if (!this.props.extraInfo) {
+    //   var extraInfo = ''
+    // } else {
+      
+    //   var usernames = this.props.extraInfo.slice(1, this.props.extraInfo.length);
+    //   var extraInfo = this.props.extraInfo[0] + usernames.join(', ');
+    // }
 
-        var extraInfo = this.props.extraInfo[0] + usernames.join(', ');
-        //console.log('usernames: ', usernames);
-      }
-      return (
-      <div id="infoPanel">
-        <h5> {name} </h5>
-        <div className="photos" style={styles}></div>
-        <p> {extraInfo} </p>
-      </div>
-      )}
+    return (
+    <div id="infoPanel">
+      <div className="photos" style={styles}></div>
+      <p> {this.props.role} </p>
+      <Cards extraInfo={this.props.extraInfo}/>
+    </div>
+    )
+  }
+
 }
 
 export default InfoPanel;
