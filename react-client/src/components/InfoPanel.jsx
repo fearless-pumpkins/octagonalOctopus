@@ -10,6 +10,7 @@ class InfoPanel extends React.Component {
 
 
   render() {
+<<<<<<< HEAD
 
     var split = this.props.role.split('_');
     var name = split[0];
@@ -19,6 +20,11 @@ class InfoPanel extends React.Component {
 
     var role = this.props.role.split(' ').join('').toLowerCase();
 
+=======
+    var split = this.props.role.split('_')
+    var name = split[0];
+    var role = split[0].split(' ').join('').toLowerCase();
+>>>>>>> added multiple loyal servants functionality
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
@@ -50,7 +56,7 @@ class InfoPanel extends React.Component {
       }
       return (
       <div id="infoPanel">
-        <h5> Info Panel </h5>
+        <h5> {name} </h5>
         <div className="photos" style={styles}></div>
         <p> {extraInfo} </p>
       </div>

@@ -201,6 +201,7 @@ button {
   background-color: lightgrey;
   font-size: 3.5vw;
   font-family: 'Eagle Lake', cursive;
+
 }
 
 /****Hover on buttons turns text red****/
@@ -252,8 +253,7 @@ button:hover, .submit:hover {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-<<<<<<< HEAD
-=======
+
 
 /*.infoPanelParent {
   display: flex;
@@ -261,4 +261,3 @@ button:hover, .submit:hover {
   align-items: center;
 <<<<<<< HEAD
 }*/
->>>>>>> resolve merge conflicts
