@@ -17,7 +17,6 @@ import GameOutcomeScreen from './components/GameOutcomeScreen.jsx';
 import InfoPanel from './components/InfoPanel.jsx';
 import openSocket from 'socket.io-client';
 import GameBoard from './components/GameBoard/GameBoard.jsx';
-import RenderPhotos from './components/renderPhotos.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -205,8 +204,6 @@ class App extends React.Component {
 
       extraInfo: null,
 
-      renderPhoto: ''
-
     };
 
   this.screenDispatch = {
@@ -367,16 +364,6 @@ class App extends React.Component {
         roomname={this.state.accessCode}
         />
       )},
-
-
-    // renderPhoto: () => {
-
-    //   return (
-    //     <RenderPhotos
-    //     role={this.state.role}
-    //     />
-    // )},
-
 
 
     WelcomeScreen: ()=> {
