@@ -47,10 +47,7 @@ body {
   align-items: center;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fixed bootstrap issue
 #playerEnterNameScreenInput .playerEnterNameScreenForm, #gameOwnerEnterNameScreenInput .gameOwnerEnterNameScreenForm  {
   display: flex;
   order: 1;
@@ -180,6 +177,15 @@ ol, table {
 .photos {
   width: 40%;
   height: 30%;
+ }
+.tableRules {
+  text-align: center;
+}
+
+.photos {
+
+  width: 50%;
+  height: 50%;
 }
 .photosRules {
  width: 80%;
@@ -275,6 +281,7 @@ div.bottom {
 .row-fluid {
   text-align: center;
 }
+
 
 
 
