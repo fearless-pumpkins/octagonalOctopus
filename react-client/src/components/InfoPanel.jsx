@@ -1,5 +1,4 @@
 import React from 'react';
-import Cards from './Cards.jsx';
 
 class InfoPanel extends React.Component {
 
@@ -10,42 +9,14 @@ class InfoPanel extends React.Component {
 
 
   render() {
-<<<<<<< HEAD
-
-    var split = this.props.role.split('_');
-    var name = split[0];
-
-    var role = this.props.role.split(' ').join('').toLowerCase();
-
-
-    var role = this.props.role.split(' ').join('').toLowerCase();
-
-=======
     var split = this.props.role.split('_')
     var name = split[0];
 
     var role = split[0].split(' ').join('').toLowerCase();
->>>>>>> added multiple loyal servants functionality
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
 
-    // if (!this.props.extraInfo) {
-    //   var extraInfo = ''
-    // } else {
-
-    //   var usernames = this.props.extraInfo.slice(1, this.props.extraInfo.length);
-    //   var extraInfo = this.props.extraInfo[0] + usernames.join(', ');
-    // }
-
-    return (
-    <div id="infoPanel">
-      <div className="photos" style={styles}></div>
-      <p> {name} </p>
-      <Cards extraInfo={this.props.extraInfo}/>
-    </div>
-    )
-  }
     if (!this.props.extraInfo) {
         var extraInfo = ''
       } else {
@@ -62,7 +33,6 @@ class InfoPanel extends React.Component {
         <p> {extraInfo} </p>
       </div>
       )}
->>>>>>> added dynamic render of character cards
 }
 
 export default InfoPanel;
