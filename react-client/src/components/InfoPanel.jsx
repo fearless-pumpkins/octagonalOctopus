@@ -37,7 +37,7 @@ class InfoPanel extends React.Component {
     return (
       <div id="infoPanel">
         <div className="photos" style={styles}></div>
-        <p> {name} </p>
+        <p> You Are {name} </p>
         {extraInfo}
       </div>
     )

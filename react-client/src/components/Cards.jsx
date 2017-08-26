@@ -22,26 +22,26 @@ class Cards extends React.Component {
 
     // loop on each key and bluid table row
 
-    var bad = { 
-      //'mordred':'Mordred', 
-      //'minionofmordred':'Minion of Mordred', 
-      'morgana':'Morgana', 
-      'oberon':'Oberon' 
+    var bad = {
+      //'mordred':'Mordred',
+      //'minionofmordred':'Minion of Mordred',
+      'morgana':'Morgana',
+      'oberon':'Oberon'
     };
-    
+
     var good = {
-      //'merlin':'Merlin', 
-      //'loyalservant_1':'Loyal Servant', 
-      'percival':'Percival', 
+      //'merlin':'Merlin',
+      //'loyalservant_1':'Loyal Servant',
+      'percival':'Percival',
       'loyalservant_2':'Loyal Servant',
       'loyalservant_3':'Loyal Servant',
       'loyalservant_4':'Loyal Servant'
     };
-  
+
     var arr = [[],[]];
     var table = [];
     //var table2;
-      
+
     for (var key in merlinTeam){
       if (key !== 'merlin' && key !== 'loyalservant_1'){
         arr[1].push([key, good[key] + ' is ' + merlinTeam[key].join(' or ')]);
@@ -89,7 +89,7 @@ class Cards extends React.Component {
     //             <td style={{fontSize:'35px'}}></td>
     //             <td style={{fontSize:'35px'}}>{arr[1][0][1]}</td>
     //           </tr>);
-    
+
 
     return (
     <div id="cards">
@@ -120,14 +120,14 @@ class Cards extends React.Component {
             <td style={{fontSize:'35px'}}>Minion of Mordred is {mordredTeam.minionofmordred.join(' or ')}</td>
             <td style={{fontSize:'35px'}}>Loyal Servant is {merlinTeam.loyalservant_1.join(' or ')}</td>
           </tr>
-          
-
-          {table.map(element => element)}  
- 
 
 
+          {table.map(element => element)}
 
-        </tbody>  
+
+
+
+        </tbody>
       </table>
     </div>
     )}
