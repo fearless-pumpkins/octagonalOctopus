@@ -10,7 +10,8 @@ class InfoPanel extends React.Component {
 
 
   render() {
-
+    var split = this.props.role.split('_');
+    var name = split[0];
     var role = this.props.role.split(' ').join('').toLowerCase();
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
@@ -27,7 +28,7 @@ class InfoPanel extends React.Component {
     return (
     <div id="infoPanel">
       <div className="photos" style={styles}></div>
-      <p> {this.props.role} </p>
+      <p> {name} </p>
       <Cards extraInfo={this.props.extraInfo}/>
     </div>
     )
