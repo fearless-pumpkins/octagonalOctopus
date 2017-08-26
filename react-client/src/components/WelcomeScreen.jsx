@@ -39,56 +39,24 @@ class WelcomeScreen extends React.Component {
           </button>
           </div>
 
-
-
-        <div id="rules">
-
-          <table id="tableRules">
-          <tbody>
-            <tr>
-              <th>Mordred Team</th>
-              <th>Merlin Team</th>
-            </tr>
-            <tr>
-              <th style={{fontSize:'35px'}}>sabotage 3 missions to win</th>
-              <th style={{fontSize:'35px'}}>succeed 3 missions to win</th>
-            </tr>
-            <tr>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`}} ></div></td>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.png)`}} ></div></td>
-            </tr>
-            <tr>
-              <td style={{fontSize:'35px'}}>Mordred</td>
-              <td style={{fontSize:'35px'}}>Merlin</td>
-            </tr>
-            <tr>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`}} ></div></td>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/percival.png)`}} ></div></td>
-            </tr>
-            <tr>
-              <td style={{fontSize:'35px'}}>Minion of Mordred</td>
-              <td style={{fontSize:'35px'}}>Percival</td>
-            </tr>
-            <tr>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/morgana.png)`}} ></div></td>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
-            </tr>
-            <tr>
-              <td style={{fontSize:'35px'}}>Morgana</td>
-              <td style={{fontSize:'35px'}}>Loyal Servant</td>
-            </tr>
-             <tr>
-              <td><div className="photosRules" style={{content: `url(/styles/Resources/oberon.png)`}} ></div></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td style={{fontSize:'35px'}}>Oberon</td>
-              <td style={{fontSize:'35px'}}></td>
-            </tr>
-          </tbody>  
-          </table>
-
+          <div id="tableRules" style={{fontSize:'50px'}}>Merlin Team</div>
+            <div className="row-fluid">
+            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/merlin.png)`}}></div>
+            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/percival.png)`}}></div>
+            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant.png)`}}></div>
+            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant_2.png)`}}></div>
         </div>
+
+        <div id="tableRules" style={{fontSize:'50px'}}>Mordred Team</div>
+          <div className="row-fluid">
+          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/mordred.png)`}}></div>
+          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/oberon.png)`}}></div>
+          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/morgana.png)`}}></div>
+          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/minionofmordred.png)`}}></div>
+        </div>
+
+
+
 
       </div>
     ),

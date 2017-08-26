@@ -170,9 +170,8 @@ ol, table {
   font-size: 50px;
 }
 
-#tableRules{
-    table-layout: fixed;
-    width: 730px;
+.tableRules{
+  text-align: center;
 }
 
 input {
@@ -300,6 +299,18 @@ button:hover, .submit:hover {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+div.bottom {
+  display: inline-block;
+  float: none;
+  text-align: left;
+
+}
+
+.row-fluid {
+  text-align: center;
+}
+
 
 /*.infoPanelParent {
   display: flex;
