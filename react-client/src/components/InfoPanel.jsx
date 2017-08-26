@@ -1,4 +1,5 @@
 import React from 'react';
+import Cards from './Cards.jsx';
 
 class InfoPanel extends React.Component {
 
@@ -20,9 +21,13 @@ class InfoPanel extends React.Component {
 
 
 
+    var split = this.props.role.split('_');
+    var name = split[0];
+    var role = split[0].split(' ').join('').toLowerCase();
     var styles = {
       content: `url(/styles/Resources/${role}.png)`
     }
+
 
     if (this.props.extraInfo){
       extraInfo = (<Cards extraInfo={this.props.extraInfo}/>);
@@ -30,6 +35,7 @@ class InfoPanel extends React.Component {
     // else {
     //   extraInfo = ();
     // }
+
 
     // if (!this.props.extraInfo) {
     //   var extraInfo = ''
@@ -67,6 +73,15 @@ class InfoPanel extends React.Component {
       )}
 <<<<<<< HEAD
 =======
+=======
+    <div id="infoPanel">
+      <div className="photos" style={styles}></div>
+      <p> {name} </p>
+      <Cards extraInfo={this.props.extraInfo}/>
+    </div>
+    )
+  }
+>>>>>>> fixed bootstrap issue
 }
 >>>>>>> fix info panel
 
