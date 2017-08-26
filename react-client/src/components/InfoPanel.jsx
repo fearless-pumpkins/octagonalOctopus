@@ -1,5 +1,4 @@
 import React from 'react';
-import Cards from './Cards.jsx';
 
 class InfoPanel extends React.Component {
 
@@ -10,16 +9,15 @@ class InfoPanel extends React.Component {
 
 
   render() {
-<<<<<<< HEAD
 
     var split = this.props.role.split('_');
     var name = split[0];
-    var role = split[0].split(' ').join('').toLowerCase();
-    var extraInfo;
+
 
 
 
     var role = this.props.role.split(' ').join('').toLowerCase();
+
 
 
     var styles = {
@@ -49,6 +47,8 @@ class InfoPanel extends React.Component {
       </div>
     )
   }
+=======
+>>>>>>> fix info panel
     if (!this.props.extraInfo) {
         var extraInfo = ''
       } else {
@@ -65,5 +65,9 @@ class InfoPanel extends React.Component {
         <p> {extraInfo} </p>
       </div>
       )}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> fix info panel
 
 export default InfoPanel;
