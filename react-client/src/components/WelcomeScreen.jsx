@@ -1,7 +1,6 @@
 import React from 'react';
 import GameOwnerEnterNameScreen from './GameOwnerEnterNameScreen.jsx';
 import PlayerEnterNameScreen from './PlayerEnterNameScreen.jsx';
-
 class WelcomeScreen extends React.Component {
 
   constructor(props) {
@@ -27,9 +26,9 @@ class WelcomeScreen extends React.Component {
     }
 
     pageSelector(key) {
-      var pages = {welcome: (<div id='welcomeScreen'>
+      var pages = {welcome: (
+        <div id='welcomeScreen'>
      <h2> Welcome to Definitely Not Avalon </h2>
-
         <div className="welcomeScreenInput">
           <button onClick={this.host} >
             New Game
@@ -38,7 +37,9 @@ class WelcomeScreen extends React.Component {
           <button onClick={this.player} >
             Join
           </button>
-        </div>
+          </div>
+
+
 
         <div id="rules">
 
@@ -105,6 +106,8 @@ class WelcomeScreen extends React.Component {
 
 
   render() {
+
+
     return (
       <div>
       {this.pageSelector(this.state.page)}

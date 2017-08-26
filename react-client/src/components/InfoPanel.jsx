@@ -23,6 +23,7 @@ class InfoPanel extends React.Component {
 =======
     var split = this.props.role.split('_')
     var name = split[0];
+
     var role = split[0].split(' ').join('').toLowerCase();
 >>>>>>> added multiple loyal servants functionality
     var styles = {
