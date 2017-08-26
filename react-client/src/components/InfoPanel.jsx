@@ -1,4 +1,5 @@
 import React from 'react';
+import Cards from './Cards.jsx';
 
 class InfoPanel extends React.Component {
 
@@ -31,7 +32,6 @@ class InfoPanel extends React.Component {
     </div>
     )
   }
-
 }
 
 export default InfoPanel;
