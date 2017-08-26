@@ -30,6 +30,7 @@ class WelcomeScreen extends React.Component {
         <div id='welcomeScreen'>
      <h2> Welcome to Definitely Not Avalon </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -50,6 +51,9 @@ class WelcomeScreen extends React.Component {
 =======
 >>>>>>> preparing for bootstrap
 >>>>>>> preparing for bootstrap
+=======
+
+>>>>>>> added bootstrap functionality
         <div className="welcomeScreenInput">
           <button onClick={this.host} >
             New Game
@@ -61,10 +65,14 @@ class WelcomeScreen extends React.Component {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> preparing for bootstrap
+=======
+
+>>>>>>> added bootstrap functionality
           <div id="tableRules" style={{fontSize:'50px'}}>Merlin Team</div>
             <div className="row-fluid">
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/merlin.png)`}}></div>
@@ -72,9 +80,7 @@ class WelcomeScreen extends React.Component {
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant.png)`}}></div>
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant_2.png)`}}></div>
         </div>
-=======
 
->>>>>>> preparing for bootstrap
 
 
         <div id="tableRules" style={{fontSize:'50px'}}>Mordred Team</div>
