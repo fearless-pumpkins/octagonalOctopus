@@ -17,18 +17,41 @@ class GameBoard extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      selectedMission: props.currentMission
+    }
+    this.setSelectedMission = this.setSelectedMission.bind(this);
   }
 
+  setSelectedMission(i) {
+    this.setState({
+      selectedMission: i
+    });
+  }
+  // var parseHistory(historyString) {
+  //   return historyString.map((result)=> {
+  //     if(Number(result[7]) > 0) {
+  //
+  //     }
+  //   });
+  // }
   render() {
     return (
-      <div>
-        <Missions
-          history = {[true, false]}
-          playerVotes = {[[true], [true, false]]}
-          numPeopleOnMission = {[1,2,3,4,5]}
-          currentMission = {1}
+      <div className='GameBoard'>
+        <Missions className='Missions'
+          history = {this.props.history}
+          numPeopleOnMissions = {this.props.numPeopleOnMissions}
+          selectedMission = {this.state.selectedMission}
+          currentMission = {this.props.currentMission}
+          setSelectedMission = {this.setSelectedMission}
         />
-        <VoteTrack />
+      <VoteTrack className='VoteTrack'
+        voteTrack = {this.props.voteTrack}
+        currentMission = {this.props.currentMission}
+        selectedMission = {this.state.selectedMission}
+        />
+
       </div>
     );
   }

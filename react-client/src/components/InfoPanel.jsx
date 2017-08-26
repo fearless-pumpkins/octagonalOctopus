@@ -17,21 +17,22 @@ class InfoPanel extends React.Component {
     }
 
     if (!this.props.extraInfo) {
-        var extraInfo = ''
-      } else {
-        console.log('extra Info: ', this.props.extraInfo);
-        var usernames = this.props.extraInfo.slice(1, this.props.extraInfo.length);
+      var extraInfo = ''
+    } else {
+      console.log('extra Info: ', this.props.extraInfo);
+      var usernames = this.props.extraInfo.slice(1, this.props.extraInfo.length);
 
-        var extraInfo = this.props.extraInfo[0] + usernames.join(', ');
-        //console.log('usernames: ', usernames);
-      }
-      return (
-      <div id="infoPanel">
-        <h5> {name} </h5>
-        <div className="photos" style={styles}></div>
-        <p> {extraInfo} </p>
-      </div>
-      )}
+      var extraInfo = this.props.extraInfo[0] + usernames.join(', ');
+      //console.log('usernames: ', usernames);
+    }
+
+    return (
+    <div id="infoPanel">
+      <h5> {name} </h5>
+      <div className="photos" style={styles}></div>
+      <p> {extraInfo} </p>
+    </div>
+    )}
 }
 
 export default InfoPanel;
