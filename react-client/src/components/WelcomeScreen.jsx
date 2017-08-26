@@ -29,20 +29,7 @@ class WelcomeScreen extends React.Component {
       var pages = {welcome: (
         <div id='welcomeScreen'>
      <h2> Welcome to Definitely Not Avalon </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> changed case
->>>>>>> changed case
-=======
-
->>>>>>> added multiple loyal servants functionality
-=======
->>>>>>> preparing for bootstrap
         <div className="welcomeScreenInput">
           <button onClick={this.host} >
             New Game
@@ -53,7 +40,7 @@ class WelcomeScreen extends React.Component {
           </button>
           </div>
 
-<<<<<<< HEAD
+
           <div id="tableRules" style={{fontSize:'50px'}}>Merlin Team</div>
             <div className="row-fluid">
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/merlin.png)`}}></div>
@@ -61,9 +48,7 @@ class WelcomeScreen extends React.Component {
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant.png)`}}></div>
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant_2.png)`}}></div>
         </div>
-=======
 
->>>>>>> preparing for bootstrap
 
         <div id="tableRules" style={{fontSize:'50px'}}>Mordred Team</div>
           <div className="row-fluid">
@@ -72,6 +57,7 @@ class WelcomeScreen extends React.Component {
           <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/morgana.png)`}}></div>
           <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/minionofmordred.png)`}}></div>
         </div>
+
 
 
 

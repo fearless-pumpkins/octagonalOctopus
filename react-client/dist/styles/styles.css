@@ -296,4 +296,25 @@ div.bottom {
   -ms-transform: translate(-50%, -50%);
 }
 
+<<<<<<< HEAD
 
+=======
+div.bottom {
+  display: inline-block;
+  float: none;
+  text-align: left;
+
+}
+
+.row-fluid {
+  text-align: center;
+}
+
+
+/*.infoPanelParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+<<<<<<< HEAD
+}*/
+>>>>>>> added bootstrap functionality
