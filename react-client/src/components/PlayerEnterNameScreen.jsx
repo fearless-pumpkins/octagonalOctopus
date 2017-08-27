@@ -29,8 +29,12 @@ class PlayerEnterNameScreen extends React.Component {
   }
 
   socketUserInfo(event) {
-    this.props.socket.emit('join', {username: this.state.nameFormValue,
-                                    roomname: this.state.roomname});
+    if (this.state.roomname.length === 0 || this.state.nameFormValue.length === 0) {
+      window.alert('Name or Access token are invalid. Please check your input');
+    } else {
+      this.props.socket.emit('join', {username: this.state.nameFormValue,
+                                      roomname: this.state.roomname});
+    }
   }
 
   backtoWelcome(event){
@@ -41,7 +45,7 @@ class PlayerEnterNameScreen extends React.Component {
     return (
       <div id="playerEnterNameScreen">
 
-        <h2> Join a Game of Defintely Not Avalon </h2>
+        <h2>Join a Game</h2>
 
         <div className="playerEnterNameScreenInput">
           <div className="playerEnterNameScreenForm">
@@ -62,7 +66,7 @@ class PlayerEnterNameScreen extends React.Component {
                 onChange={this.handleNameChange}
                 />
 
-              <input type="submit" value="Join" onClick={this.socketUserInfo}/>
+              <input className="joinCreateButton" type="submit" value="Join" onClick={this.socketUserInfo}/>
             </form>
           </div>
 
