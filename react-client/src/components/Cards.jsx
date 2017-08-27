@@ -100,7 +100,7 @@ class Cards extends React.Component {
             <th>Merlin Team</th>
           <tr>
             <th>Sabotage 3 missions to win</th>
-            <th}>Succeed 3 missions to win</th>
+            <th>Succeed 3 missions to win</th>
           </tr>
           <tr>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'order-top': 'none !important'}} ></div></td>
