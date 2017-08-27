@@ -9,6 +9,12 @@ class Cards extends React.Component {
   render() {
 
     console.log('extra Info: ', this.props.extraInfo);
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top',
+        trigger : 'hover'
+    });
+    });
 
     var mordredTeam = this.props.extraInfo.mordredTeam;
     var merlinTeam = this.props.extraInfo.merlinTeam;
@@ -92,19 +98,17 @@ class Cards extends React.Component {
 
 
     return (
-    <div id="cards">
-      <table id="tableRules">
+  <div className="table-responsive">
+      <table className="table">
         <tbody>
+            <th style={{fontSize:'35px'}}>Mordred Team</th>
+            <th style={{fontSize:'35px'}}>Merlin Team</th>
           <tr>
-            <th>Mordred Team</th>
-            <th>Merlin Team</th>
+            <th style={{fontSize:'35px'}}>Sabotage 3 missions to win</th>
+            <th style={{fontSize:'35px'}}>Succeed 3 missions to win</th>
           </tr>
           <tr>
-            <th style={{fontSize:'35px'}}>sabotage 3 missions to win</th>
-            <th style={{fontSize:'35px'}}>succeed 3 missions to win</th>
-          </tr>
-          <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'order-top': 'none !important'}} ></div></td>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.png)`}} ></div></td>
           </tr>
           <tr>
@@ -113,7 +117,7 @@ class Cards extends React.Component {
           </tr>
 
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`, 'order-top': 'none !important'}} ></div></td>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
           </tr>
           <tr>

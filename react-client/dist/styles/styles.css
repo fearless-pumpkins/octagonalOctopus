@@ -164,20 +164,10 @@ ol, table {
   font-size: 50px;
 }
 
-
-.tableRules{
+.name {
   text-align: center;
+  font-size: 50px;
 }
-
-#tableRules{
-    table-layout: fixed;
-    width: 730px;
-}
-
-.photos {
-  width: 40%;
-  height: 30%;
- }
 .tableRules {
   text-align: center;
 }
@@ -277,24 +267,16 @@ div.bottom {
 
 }
 
-.row-fluid {
-  text-align: center;
+.table th {
+   text-align: center;
 }
 
-
-
-
-
-div.bottom {
-  display: inline-block;
-  float: none;
-  text-align: left;
-
+.table td {
+   text-align: center;
 }
 
 .row-fluid {
+
   text-align: center;
 }
-
-
 
