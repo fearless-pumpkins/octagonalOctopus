@@ -230,8 +230,8 @@ input {
 
 input[type=text]:hover {
     outline:none;
-    border-color:red;
-    box-shadow:0 0 30px red;
+    border-color:steelblue;
+    box-shadow:0 0 30px steelblue;
 }
 
 
