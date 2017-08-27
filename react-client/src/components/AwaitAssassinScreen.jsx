@@ -2,6 +2,7 @@ import React from 'react';
 
 import InfoPanel from './InfoPanel.jsx';
 import Timer from './Timer.jsx';
+import GameBoard from './GameBoard/GameBoard.jsx';
 
 class AwaitAssassinScreen extends React.Component {
 
@@ -15,13 +16,14 @@ class AwaitAssassinScreen extends React.Component {
 
     return (
       <div id="awaitAssassinScreen">
-
-        <h3> Awaiting Mordred </h3>
-        
         <InfoPanel role={this.props.role} missionHistory={this.props.history} />
-        
-        
-
+        <GameBoard
+          history = {this.props.questHistory}
+          numPeopleOnMissions = {this.props.numPeopleOnMissions}
+          currentMission = {this.props.questHistory.length}
+          voteTrack={this.props.voteTrack}
+          messageDisplay = {`Awaiting Mordred...`}
+          />
       </div>
     )}
 }

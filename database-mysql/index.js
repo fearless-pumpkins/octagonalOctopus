@@ -54,6 +54,18 @@ const Game = sequelize.define('game', {
   },
   numParticipants: {
     type: Sequelize.INTEGER,
+  },
+  voteTrack: {
+    type: Sequelize.STRING,
+    defaultValue: '{"0": [], "1": [], "2": [], "3": [], "4": []}'
+  },
+  hostChangeCounter: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0
+  },
+  questApprovalVotes: {
+    type: Sequelize.STRING,
+    defaultValue: '[]'
   }
 })
 
@@ -66,6 +78,34 @@ module.exports.getResults = function(gameToken, callback) {
   .then((game) => {
     callback(JSON.parse(game.dataValues.results));
   })
+};
+
+module.exports.updateVoteTrack = function(gameToken, vote, callback) {
+  Game.findOne({where: {gameToken}})
+  .then((game) => {
+    var voteTrack = JSON.parse(game.dataValues.voteTrack);
+    voteTrack[game.dataValues.missionNumber].push(vote);
+    game.update({voteTrack: JSON.stringify(voteTrack)});
+    callback(JSON.stringify(voteTrack));
+  });
+};
+
+module.exports.addQuestVote = function(gameToken, vote, callback) {
+  Game.findOne({where: {gameToken}})
+  .then((game) => {
+    var votesArray = JSON.parse(game.dataValues.questApprovalVotes);
+    votesArray.push(vote);
+    votes = JSON.stringify(votesArray);
+    game.update({questApprovalVotes: votes});
+    callback(game.dataValues.numParticipants, votesArray);
+  });
+};
+
+module.exports.resetQuestVote = function(gameToken) {
+  Game.findOne({where: {gameToken}})
+  .then((game) => {
+    game.update({questApprovalVotes: "[]"});
+  });
 };
 
 module.exports.addVote = function(gameToken, vote, callback) {
@@ -89,7 +129,7 @@ module.exports.votingInfo = function(gameToken, callback) {
 module.exports.votesNeeded = function(gameToken, callback) {
   Game.findOne({where: {gameToken}})
   .then((game) => {
-    callback(JSON.parse(game.dataValues.votesNeeded)[game.dataValues.missionNumber]);
+    callback(JSON.parse(game.dataValues.votesNeeded)[game.dataValues.missionNumber], JSON.parse(game.dataValues.votesNeeded), game.dataValues.voteTrack);
   });
 };
 
@@ -169,13 +209,45 @@ module.exports.getAllSocketIds = function(gameKey, callback) {
   });
 };
 
-module.exports.updateHost = function(gameKey, socketid, callback) {
-  User.findOne({where: {socketid, gameKey}})
-  .then((user) => {
-    var host = true;
-    user.update({host});
-  })
-  .then(callback)
+module.exports.updateHost = function(gameKey, callback) {
+  var gameToken = gameKey;
+  Game.findOne({where: {gameToken}})
+    .then(game => {
+      var counter = game.dataValues.hostChangeCounter;
+      User.findAll({where: {gameKey, host: false}, order: sequelize.col('createdAt')})
+        .then(nonHostUsers => {
+          var newHost = nonHostUsers[counter].dataValues;
+          game.update({hostChangeCounter: (++counter % nonHostUsers.length)});
+          User.findOne({where: {gameKey, host: true}})
+            .then(oldHost => {
+              oldHost.update({host:false});
+              User.findOne({where: {gameKey, username: newHost.username}})
+                .then(foundNewHost => {
+                  foundNewHost.update({host: true})
+                   .then(callback(foundNewHost.dataValues));
+                })
+            })
+        })
+    })
+  // User.findAll({where: {gameKey, host: 0}})
+  //   .then((users) => {
+  //     Game.findOne({where: {gameToken}})
+  //       .then((game)=> {
+  //         var counter = game.hostChangeCounter;
+  //         game.update({hostChangeCounter: (counter++ % users.length)});
+  //         var user = users[counter];
+  //         var host = true;
+  //         User.findOne({where: {gameKey, host}})
+  //           .then((originalHost)=>{
+  //             originalHost.update({host: false});
+  //             User.findOne({where: {gameKey, username: user.username}})
+  //               .then((newHost)=>{
+  //                 newHost.update({host});
+  //                 callback(newHost);
+  //               })
+  //           })
+  //       })
+  //     })
 }
 
 module.exports.getSocketId = function(username, gameKey, callback) {

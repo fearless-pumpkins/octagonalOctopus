@@ -2,6 +2,7 @@ import React from 'react';
 
 import InfoPanel from './InfoPanel.jsx';
 import Timer from './Timer.jsx';
+import GameBoard from './GameBoard/GameBoard.jsx';
 
 class MissionOutcomeScreen extends React.Component {
 
@@ -15,18 +16,16 @@ class MissionOutcomeScreen extends React.Component {
 
     return (
       <div id="missionOutcome">
-
-        <h4> Mission Outcome  </h4>
-
         <InfoPanel role={this.props.role} missionHistory={this.props.history}  extraInfo = {this.props.extraInfo}/>
-
-        <p>
-        Fail votes: {this.props.failVotes}
-        </p>
-
-        <p>
-        Success votes: {this.props.successVotes}
-        </p>
+        <GameBoard
+          history = {this.props.questHistory}
+          numPeopleOnMissions = {this.props.numPeopleOnMissions}
+          currentMission = {this.props.questHistory.length}
+          voteTrack={this.props.voteTrack}
+          messageDisplay = {`Mission Outcome:\n
+            Fail votes: ${this.props.failVotes}\n
+            Success votes: ${this.props.successVotes}`}
+          />
 
         <button onClick={this.nextPage}>
         Next Mission!

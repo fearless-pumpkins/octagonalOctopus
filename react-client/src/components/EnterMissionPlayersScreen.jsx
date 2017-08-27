@@ -3,6 +3,7 @@ import $ from 'jquery';
 
 import InfoPanel from './InfoPanel.jsx';
 import MissionHistory from './MissionHistory.jsx';
+import GameBoard from './GameBoard/GameBoard.jsx';
 
 class EnterMissonPlayersScreen extends React.Component {
 
@@ -17,15 +18,15 @@ class EnterMissonPlayersScreen extends React.Component {
     return (
       <div id="enterMissionPlayersScreen">
 
-        <h3> Decide who Goes on the Mission </h3>
-
         <InfoPanel role={this.props.role}   extraInfo = {this.props.extraInfo}/>
-
-        <MissionHistory missionHistory={this.props.history}  />
-
-        <h5>
-        Discuss Which {this.props.missionSize} Players to Send on the Mission and enter the results:
-        </h5>
+        <GameBoard
+          history = {this.props.questHistory}
+          numPeopleOnMissions = {this.props.numPeopleOnMissions}
+          currentMission = {this.props.questHistory.length}
+          voteTrack={this.props.voteTrack}
+          messageDisplay = {`Discuss Which ${this.props.missionSize} Players to Send on the Mission and enter the results:`}
+          />
+         <MissionHistory missionHistory={this.props.history}  />
 
         <ul id="missionSelection">
         {this.props.players.map((player, index)=>{
@@ -65,8 +66,8 @@ class EnterMissonPlayersScreen extends React.Component {
   sendNames(){
     // if the required number of boxes are selected then send players on mission.
     if ($("input[name='player']:checked").length === this.props.missionSize) {
-      this.props.socket.emit('missionparticipants', {participants: this.state.selected,
-      roomname: this.props.roomname});
+      console.log('hostName from entermissionplayerscreen:', this.props.hostName)
+      this.props.socket.emit('questApprovalNeeded', {participants: this.state.selected, roomname: this.props.roomname});
     } else {
       // if more players are required then show error.
       $('#errDiv').empty();
