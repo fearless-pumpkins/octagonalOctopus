@@ -176,8 +176,10 @@ ol, table {
 .name {
   text-align: center;
   font-size: 50px;
+  margin-bottom: 50px;
 }
-.tableRules {
+
+.welcomeScreenTeams {
   text-align: center;
   font-size: 5vw;
 }

@@ -43,7 +43,7 @@ class WelcomeScreen extends React.Component {
       </div>
 
       <div className="teams">
-        <div className="tableRules">.: Merlin Team :.</div>
+        <div className="welcomeScreenTeams">.: Merlin Team :.</div>
         <div className="row-fluid">
           <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/merlin.png)`}}></div>
           <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/percival.png)`}}></div>
@@ -52,7 +52,7 @@ class WelcomeScreen extends React.Component {
         </div>
 
 
-          <div className="tableRules">.: Mordred Team :.</div>
+          <div className="welcomeScreenTeams">.: Mordred Team :.</div>
           <div className="row-fluid">
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/mordred.png)`}}></div>
             <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/oberon.png)`}}></div>
