@@ -9,12 +9,7 @@ class Cards extends React.Component {
   render() {
 
     console.log('extra Info: ', this.props.extraInfo);
-    $(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-        placement : 'top',
-        trigger : 'hover'
-    });
-    });
+
 
     var mordredTeam = this.props.extraInfo.mordredTeam;
     var merlinTeam = this.props.extraInfo.merlinTeam;
@@ -101,11 +96,11 @@ class Cards extends React.Component {
   <div className="table-responsive">
       <table className="table">
         <tbody>
-            <th style={{fontSize:'35px'}}>Mordred Team</th>
-            <th style={{fontSize:'35px'}}>Merlin Team</th>
+            <th>Mordred Team</th>
+            <th>Merlin Team</th>
           <tr>
-            <th style={{fontSize:'35px'}}>Sabotage 3 missions to win</th>
-            <th style={{fontSize:'35px'}}>Succeed 3 missions to win</th>
+            <th>Sabotage 3 missions to win</th>
+            <th}>Succeed 3 missions to win</th>
           </tr>
           <tr>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'order-top': 'none !important'}} ></div></td>
@@ -121,8 +116,8 @@ class Cards extends React.Component {
             <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
           </tr>
           <tr>
-            <td style={{fontSize:'35px'}}>Minion of Mordred is {mordredTeam.minionofmordred.join(' or ')}</td>
-            <td style={{fontSize:'35px'}}>Loyal Servant is {merlinTeam.loyalservant_1.join(' or ')}</td>
+            <td>Minion of Mordred is {mordredTeam.minionofmordred.join(' or ')}</td>
+            <td>Loyal Servant is {merlinTeam.loyalservant_1.join(' or ')}</td>
           </tr>
 
 
