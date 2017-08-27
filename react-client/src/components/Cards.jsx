@@ -9,6 +9,12 @@ class Cards extends React.Component {
   render() {
 
     console.log('extra Info: ', this.props.extraInfo);
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top',
+        trigger : 'hover'
+    });
+    });
 
     var mordredTeam = this.props.extraInfo.mordredTeam;
     var merlinTeam = this.props.extraInfo.merlinTeam;
@@ -22,26 +28,26 @@ class Cards extends React.Component {
 
     // loop on each key and bluid table row
 
-    var bad = { 
-      //'mordred':'Mordred', 
-      //'minionofmordred':'Minion of Mordred', 
-      'morgana':'Morgana', 
-      'oberon':'Oberon' 
+    var bad = {
+      //'mordred':'Mordred',
+      //'minionofmordred':'Minion of Mordred',
+      'morgana':'Morgana',
+      'oberon':'Oberon'
     };
-    
+
     var good = {
-      //'merlin':'Merlin', 
-      //'loyalservant_1':'Loyal Servant', 
-      'percival':'Percival', 
+      //'merlin':'Merlin',
+      //'loyalservant_1':'Loyal Servant',
+      'percival':'Percival',
       'loyalservant_2':'Loyal Servant',
       'loyalservant_3':'Loyal Servant',
       'loyalservant_4':'Loyal Servant'
     };
-  
+
     var arr = [[],[]];
     var table = [];
     //var table2;
-      
+
     for (var key in merlinTeam){
       if (key !== 'merlin' && key !== 'loyalservant_1'){
         arr[1].push([key, good[key] + ' is ' + merlinTeam[key].join(' or ')]);
@@ -89,22 +95,20 @@ class Cards extends React.Component {
     //             <td style={{fontSize:'35px'}}></td>
     //             <td style={{fontSize:'35px'}}>{arr[1][0][1]}</td>
     //           </tr>);
-    
+
 
     return (
-    <div id="cards">
-      <table id="tableRules">
+  <div className="table-responsive">
+      <table className="table">
         <tbody>
+            <th style={{fontSize:'35px'}}>Mordred Team</th>
+            <th style={{fontSize:'35px'}}>Merlin Team</th>
           <tr>
-            <th>Mordred Team</th>
-            <th>Merlin Team</th>
+            <th style={{fontSize:'35px'}}>Sabotage 3 missions to win</th>
+            <th style={{fontSize:'35px'}}>Succeed 3 missions to win</th>
           </tr>
           <tr>
-            <th style={{fontSize:'35px'}}>sabotage 3 missions to win</th>
-            <th style={{fontSize:'35px'}}>succeed 3 missions to win</th>
-          </tr>
-          <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'order-top': 'none !important'}} ></div></td>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.png)`}} ></div></td>
           </tr>
           <tr>
@@ -113,21 +117,21 @@ class Cards extends React.Component {
           </tr>
 
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`, 'order-top': 'none !important'}} ></div></td>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
           </tr>
           <tr>
             <td style={{fontSize:'35px'}}>Minion of Mordred is {mordredTeam.minionofmordred.join(' or ')}</td>
             <td style={{fontSize:'35px'}}>Loyal Servant is {merlinTeam.loyalservant_1.join(' or ')}</td>
           </tr>
-          
-
-          {table.map(element => element)}  
- 
 
 
+          {table.map(element => element)}
 
-        </tbody>  
+
+
+
+        </tbody>
       </table>
     </div>
     )}
