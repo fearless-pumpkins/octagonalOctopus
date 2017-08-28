@@ -69,8 +69,8 @@ class Cards extends React.Component {
                 </tr>;
 
       let b = <tr>
-                  <td style={{fontSize:'35px'}}>{name1}</td>
-                  <td style={{fontSize:'35px'}}>{name2}</td>
+                  <td>{name1}</td>
+                  <td>{name2}</td>
                 </tr>;
 
 
@@ -81,29 +81,20 @@ class Cards extends React.Component {
 
     }
 
-    // table.push(<tr>
-    //             <td></td>
-    //             <td><div className="photosRules" style={{content: `url(/styles/Resources/${arr[1][0][0]}.png)`}} ></div></td>
-    //           </tr>);
-
-    // table.push(<tr>
-    //             <td style={{fontSize:'35px'}}></td>
-    //             <td style={{fontSize:'35px'}}>{arr[1][0][1]}</td>
-    //           </tr>);
-
-
     return (
   <div className="table-responsive">
       <table className="table">
         <tbody>
+          <tr>
             <th>Mordred Team</th>
             <th>Merlin Team</th>
+          </tr>
           <tr>
             <th>Sabotage 3 missions to win</th>
             <th>Succeed 3 missions to win</th>
           </tr>
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'order-top': 'none !important'}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'orderTop': 'none !important'}} ></div></td>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.png)`}} ></div></td>
           </tr>
           <tr>
@@ -112,7 +103,7 @@ class Cards extends React.Component {
           </tr>
 
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`, 'order-top': 'none !important'}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`, 'orderTop': 'none !important'}} ></div></td>
             <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
           </tr>
           <tr>
@@ -120,12 +111,8 @@ class Cards extends React.Component {
             <td>Loyal Servant is {merlinTeam.loyalservant_1.join(' or ')}</td>
           </tr>
 
-
           {table.map(element => element)}
-
-
-
-
+          
         </tbody>
       </table>
     </div>
