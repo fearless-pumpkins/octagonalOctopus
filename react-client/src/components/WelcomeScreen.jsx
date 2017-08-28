@@ -45,19 +45,19 @@ class WelcomeScreen extends React.Component {
       <div className="teams">
         <div className="welcomeScreenTeams">.: Merlin Team :.</div>
         <div className="row-fluid">
-          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/merlin.png)`}}></div>
-          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/percival.png)`}}></div>
-          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant.png)`}}></div>
-          <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/loyalservant_2.png)`}}></div>
+          <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/merlin.jpg)`}}></div></div>
+          <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/percival.jpg)`}}></div></div>
+          <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/loyalservant.jpg)`}}></div></div>
+          <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/loyalservant_2.jpg)`}}></div></div>
         </div>
 
 
           <div className="welcomeScreenTeams">.: Mordred Team :.</div>
           <div className="row-fluid">
-            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/mordred.png)`}}></div>
-            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/oberon.png)`}}></div>
-            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/morgana.png)`}}></div>
-            <div className="bottom col-xs-6 col-md-3" style={{content: `url(/styles/Resources/minionofmordred.png)`}}></div>
+            <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/mordred.jpg)`}}></div></div>
+            <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/oberon.jpg)`}}></div></div>
+            <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/morgana.jpg)`}}></div></div>
+            <div className="bottom col-xs-6 col-md-3"> <div className="welcomeScreenImages" style={{content: `url(/styles/Resources/minionofmordred.jpg)`}}></div></div>
           </div>
         </div>
 
