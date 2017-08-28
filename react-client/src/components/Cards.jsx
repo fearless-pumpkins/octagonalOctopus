@@ -58,8 +58,8 @@ class Cards extends React.Component {
 
     for(var i = 0; i < arr[1].length; i++){
 
-      let image1 = arr[0][i]?`url(/styles/Resources/${arr[0][i][0]}.png)`:'';
-      let image2 = arr[1][i]?`url(/styles/Resources/${arr[1][i][0]}.png)`:'';
+      let image1 = arr[0][i]?`url(/styles/Resources/${arr[0][i][0]}.jpg)`:'';
+      let image2 = arr[1][i]?`url(/styles/Resources/${arr[1][i][0]}.jpg)`:'';
       let name1 = arr[0][i]?arr[0][i][1]:'';
       let name2 = arr[1][i]?arr[1][i][1]:'';
 
@@ -94,8 +94,8 @@ class Cards extends React.Component {
             <th>Succeed 3 missions to win</th>
           </tr>
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'orderTop': 'none !important'}} ></div></td>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.jpg)`, 'orderTop': 'none !important'}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.jpg)`}} ></div></td>
           </tr>
           <tr>
             <td>Mordred is {mordredTeam.mordred.join(' or ')}</td>
@@ -103,8 +103,8 @@ class Cards extends React.Component {
           </tr>
 
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`, 'orderTop': 'none !important'}} ></div></td>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.jpg)`, 'orderTop': 'none !important'}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.jpg)`}} ></div></td>
           </tr>
           <tr>
             <td>Minion of Mordred is {mordredTeam.minionofmordred.join(' or ')}</td>
@@ -112,7 +112,7 @@ class Cards extends React.Component {
           </tr>
 
           {table.map(element => element)}
-          
+
         </tbody>
       </table>
     </div>
