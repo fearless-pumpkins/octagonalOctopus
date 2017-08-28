@@ -222,14 +222,6 @@ input {
   font-weight: bolder;
 }
 
-/*****Change Input Text Border to Red*****/
-/*input[type=text] {
-    border:1px solid gray;
-    border-radius:7px;
-    font-size:15px;
-    padding:5px;
-}*/
-
 input[type=text]:hover {
     outline:none;
     border-color:steelblue;
@@ -250,8 +242,7 @@ button {
   border-radius: 15px;
 }
 
-/****Hover on buttons turns text red****/
-/*button:hover, .submit:hover {
+button:hover, .submit:hover {
   color: blue;
 }
 
@@ -397,7 +388,7 @@ div.bottom {
 .table td {
    text-align: center;
 }
-*/
+
 .row-fluid {
 
   text-align: center;
