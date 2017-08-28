@@ -508,3 +508,7 @@ button:active, .joinCreateButton:active {
   background: rgba(0, 0, 0, 0.64);
   line-height: 4vw;
 }
+
+#merlinChoiceScreen form, #merlinChoiceScreen input{
+  color: black;
+}
