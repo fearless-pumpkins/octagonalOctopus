@@ -26,7 +26,6 @@ class EnterMissonPlayersScreen extends React.Component {
           voteTrack={this.props.voteTrack}
           messageDisplay = {`Discuss Which ${this.props.missionSize} Players to Send on the Mission and enter the results:`}
           />
-         <MissionHistory missionHistory={this.props.history}  />
 
         <ul id="missionSelection">
         {this.props.players.map((player, index)=>{

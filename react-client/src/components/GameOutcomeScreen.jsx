@@ -33,8 +33,6 @@ class GameOutcomeScreen extends React.Component {
 
       <div id="gameOutcomeScreen">
         <h5> Game Outcome  </h5>
-
-        <MissionHistory missionHistory={this.props.history}/>
         <div>{result}</div>
 
 

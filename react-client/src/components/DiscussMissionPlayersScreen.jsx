@@ -23,7 +23,6 @@ class DiscussMissionPlayersScreen extends React.Component {
           voteTrack={this.props.voteTrack}
           messageDisplay = {`${this.props.hostName} is deciding on who to send on the quest...`}
           />
-        <MissionHistory missionHistory={this.props.history} />
 
       </div>
       )}
