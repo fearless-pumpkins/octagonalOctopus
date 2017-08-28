@@ -30,7 +30,7 @@ class EnterMissonPlayersScreen extends React.Component {
 
         <ul id="missionSelection">
         {this.props.players.map((player, index)=>{
-          return (<li key={index}><label><input className="missionChoices" onChange={this.selectedForMission} type="checkbox" name="player" value={player}/></label>{player}</li>)
+          return (<li key={index}><input className="missionChoices" onChange={this.selectedForMission} type="checkbox" name="player" id={player} value={player}/><label htmlFor={player}>{player}</label></li>)
         })}
 
         </ul>

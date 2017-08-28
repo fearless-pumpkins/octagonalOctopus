@@ -7,6 +7,16 @@
   --If it contains a backButton, it will be inside the *componentname*Input
   with .backButton.
 **********************/
+@font-face {
+    font-family: Eagle-Lake;
+    src: url('/styles/Fonts/EagleLake-Regular.ttf');
+}
+
+@font-face {
+    font-family: Quintessential;
+    src: url('/styles/Fonts/Quintessential-Regular.ttf');
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -111,11 +121,13 @@ input[type=checkbox] {
 }
 
 #notEnoughPlayersErr {
-  background: black;
+  background: rgba(0, 0, 0, 0.62);
   text-align: center;
   color: red;
-  opacity: .6;
-  height: 30px;
+  border-style: solid;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 #missionVoteScreen p {
@@ -175,7 +187,7 @@ ul {
 }
 
 ol, table {
-  font-size: 50px;
+  font-size: 4vw;
 }
 
 .name {
@@ -206,22 +218,14 @@ input {
   width: 80%;
   background-color: lightgrey;
   font-size: 5vw;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Eagle-Lake', cursive;
   font-weight: bolder;
 }
 
-/*****Change Input Text Border to Red*****/
-/*input[type=text] {
-    border:1px solid gray;
-    border-radius:7px;
-    font-size:15px;
-    padding:5px;
-}*/
-
 input[type=text]:hover {
     outline:none;
-    border-color:red;
-    box-shadow:0 0 30px red;
+    border-color:steelblue;
+    box-shadow:0 0 30px steelblue;
 }
 
 
@@ -234,11 +238,10 @@ button {
   align-self: center;
   background-color: lightgrey;
   font-size: 3vw;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Eagle-Lake', cursive;
   border-radius: 15px;
 }
 
-/****Hover on buttons turns text red****/
 button:hover, .submit:hover {
   color: blue;
 }
@@ -392,7 +395,7 @@ div.bottom {
   /* border-style: solid; */
   border-color: #3c85b0;
   border-radius: 10px;
-  background: url('https://i.pinimg.com/736x/16/60/b3/1660b3b75ae18559ca301fb8bbfcea69--sweet-nothings-poetry-quotes.jpg');
+  background: url('/styles/Resources/parchment_background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   /* color: black; */
@@ -441,6 +444,13 @@ div.bottom {
   margin-top: 50px;
 }
 
+button:active, .joinCreateButton:active {
+  background-color: goldenrod;
+  color: white;
+  box-shadow: inset 0px 0px 15px 3px black;
+  border-style: inset !important;
+}
+
 .playerWaitingForPlayersScreenInput {
   width: 100%;
   display: flex;
@@ -455,4 +465,29 @@ div.bottom {
 .table-responsive th {
   text-align: center;
   font-size: 4vw;
+}
+
+.joinCreateButton {
+  background-color: steelblue;
+  color: white !important;
+  border: 1px solid steelblue;
+  /* border-radius: 30px; */
+  box-shadow: 0px 7px 15px 0px black;
+}
+
+#missionSelection {
+  width: 100%;
+  margin-right: 100px;
+  margin-left: 30px;
+}
+
+#missionSelection li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.missionChoices {
+  width: 70px;
+  height: 70px;
 }
