@@ -35,7 +35,6 @@ class ApproveQuestScreen extends React.Component {
           voteTrack= {this.props.voteTrack}
           messageDisplay = {`${this.props.hostName} has proposed ${this.props.missionPlayers.join(' and ')} to go on the mission. Do you approve or reject this proposal?`}
           />
-         <MissionHistory missionHistory={this.props.history}  />
 
          <div>
            <button onClick={this.fail}>

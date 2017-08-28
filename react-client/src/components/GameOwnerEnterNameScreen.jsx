@@ -26,7 +26,11 @@ class GameOwnerEnterNameScreen extends React.Component {
   }
 
   gettingHostUsername(event){
-    this.props.socket.emit('create', {username: this.state.nameFormValue});
+    if (this.state.nameFormValue.length === 0) {
+      window.alert('Please enter a name');
+    } else {
+      this.props.socket.emit('create', {username: this.state.nameFormValue});
+    }
   }
 
   backtoWelcome(){
@@ -45,12 +49,12 @@ class GameOwnerEnterNameScreen extends React.Component {
             <input
               type="text"
               name="Name"
-              placeholder="Your Name" 
+              placeholder="Your Name"
               value={this.state.nameFormValue}
               onChange={this.handleNameChange}
               />
 
-            <input type="submit" value="Submit" onClick={this.gettingHostUsername}/>
+            <input className="joinCreateButton" type="submit" value="Submit" onClick={this.gettingHostUsername}/>
           </form>
 
           <button className="backButton" onClick={this.backtoWelcome}>

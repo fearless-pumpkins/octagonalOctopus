@@ -58,8 +58,8 @@ class Cards extends React.Component {
 
     for(var i = 0; i < arr[1].length; i++){
 
-      let image1 = arr[0][i]?`url(/styles/Resources/${arr[0][i][0]}.png)`:'';
-      let image2 = arr[1][i]?`url(/styles/Resources/${arr[1][i][0]}.png)`:'';
+      let image1 = arr[0][i]?`url(/styles/Resources/${arr[0][i][0]}.jpg)`:'';
+      let image2 = arr[1][i]?`url(/styles/Resources/${arr[1][i][0]}.jpg)`:'';
       let name1 = arr[0][i]?arr[0][i][1]:'';
       let name2 = arr[1][i]?arr[1][i][1]:'';
 
@@ -69,8 +69,8 @@ class Cards extends React.Component {
                 </tr>;
 
       let b = <tr>
-                  <td style={{fontSize:'35px'}}>{name1}</td>
-                  <td style={{fontSize:'35px'}}>{name2}</td>
+                  <td>{name1}</td>
+                  <td>{name2}</td>
                 </tr>;
 
 
@@ -81,30 +81,21 @@ class Cards extends React.Component {
 
     }
 
-    // table.push(<tr>
-    //             <td></td>
-    //             <td><div className="photosRules" style={{content: `url(/styles/Resources/${arr[1][0][0]}.png)`}} ></div></td>
-    //           </tr>);
-
-    // table.push(<tr>
-    //             <td style={{fontSize:'35px'}}></td>
-    //             <td style={{fontSize:'35px'}}>{arr[1][0][1]}</td>
-    //           </tr>);
-
-
     return (
   <div className="table-responsive">
       <table className="table">
         <tbody>
+          <tr>
             <th>Mordred Team</th>
             <th>Merlin Team</th>
+          </tr>
           <tr>
             <th>Sabotage 3 missions to win</th>
             <th>Succeed 3 missions to win</th>
           </tr>
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.png)`, 'order-top': 'none !important'}} ></div></td>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/mordred.jpg)`, 'orderTop': 'none !important'}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/merlin.jpg)`}} ></div></td>
           </tr>
           <tr>
             <td>Mordred is {mordredTeam.mordred.join(' or ')}</td>
@@ -112,19 +103,15 @@ class Cards extends React.Component {
           </tr>
 
           <tr>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.png)`, 'order-top': 'none !important'}} ></div></td>
-            <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.png)`}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/minionofmordred.jpg)`, 'orderTop': 'none !important'}} ></div></td>
+            <td><div className="photosRules" style={{content: `url(/styles/Resources/loyalservant.jpg)`}} ></div></td>
           </tr>
           <tr>
             <td>Minion of Mordred is {mordredTeam.minionofmordred.join(' or ')}</td>
             <td>Loyal Servant is {merlinTeam.loyalservant_1.join(' or ')}</td>
           </tr>
 
-
           {table.map(element => element)}
-
-
-
 
         </tbody>
       </table>

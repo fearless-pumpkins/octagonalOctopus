@@ -16,7 +16,7 @@ class InfoPanel extends React.Component {
     var extraInfo;
 
     var styles = {
-      content: `url(/styles/Resources/${role}.png)`
+      content: `url(/styles/Resources/${role}.jpg)`
     }
 
     if (this.props.extraInfo){
@@ -36,8 +36,8 @@ class InfoPanel extends React.Component {
 
     return (
       <div id="infoPanel">
+        <h2 className="name"> You Are {name} </h2>
         <div className="photos" style={styles}></div>
-        <div className="name"> You Are {name} </div>
         {extraInfo}
       </div>
     )

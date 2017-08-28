@@ -5,7 +5,7 @@ let VoteTrack = (props) => {
   var voteTrack = JSON.parse(props.voteTrack);
   return (
     <div className='votetrack'>
-      {(props.currentMission !== props.selectedMission) ? <div className='title' style={{fontSize:'3vw'}}>Vote History</div> : <div className='title' style={{fontSize:'3vw'}}>Vote Track</div> }
+      {(props.currentMission !== props.selectedMission) ? <p className='title' style={{fontSize:'3vw'}}>Vote History</p> : <p className='title' style={{fontSize:'3vw'}}>Vote Track</p> }
 
       <div className='displayHelp'>{`
           The vote tracker displays how many times teams have been rejected to go on a quest.
